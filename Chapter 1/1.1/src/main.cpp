@@ -1,9 +1,9 @@
 #include <string.h>
+#include <climits>
 #include <iostream>
 
 bool is_unique(char* str) {
-    uint32_t BYTE_TO_BIT = 8;
-    const uint32_t NUM_POSSIBLE = 2 << (sizeof(char) * BYTE_TO_BIT);
+    const uint32_t NUM_POSSIBLE = 2 << CHAR_BIT;
     uint32_t len = strlen(str);
 
     if(len > NUM_POSSIBLE) {
